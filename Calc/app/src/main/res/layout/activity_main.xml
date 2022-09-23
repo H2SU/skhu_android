@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="7dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Calculation"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="43sp" />
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="fill_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="60dp"
+            android:background="@android:drawable/editbox_background"
+            android:cursorVisible="false"
+            android:textAlignment="viewEnd"
+            android:textSize="40sp" />
+
+        <TableLayout
+            android:id="@+id/rowl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ok"
+            android:layout_below="@id/number"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1" >
+
+            <TableRow android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/n1"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/n2"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/n3"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="3" />
+
+                <Button
+                    android:id="@+id/plus"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_weight="1"
+                    android:onClick="onClick"
+                    android:text="＋" />
+            </TableRow>
+
+            <TableRow android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/n4"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="2dp"
+                    android:onClick="onClick"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/n5"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="2dp"
+                    android:onClick="onClick"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/n6"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="2dp"
+                    android:onClick="onClick"
+                    android:text="6" />
+                <Button
+                    android:id="@+id/sub"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="2dp"
+                    android:onClick="onClick"
+                    android:text="－" />
+            </TableRow>
+            <TableRow android:layout_weight="1">
+                <Button
+                    android:id="@+id/n7"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="2dp"
+                    android:onClick="onClick"
+                    android:text="7" />
+                <Button
+                    android:id="@+id/n8"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="2dp"
+                    android:onClick="onClick"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/n9"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="2dp"
+                    android:onClick="onClick"
+                    android:text="9" />
+                <Button
+                    android:id="@+id/mul"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="2dp"
+                    android:onClick="onClick"
+                    android:text="×" />
+
+            </TableRow>
+            <TableRow android:layout_weight="1">
+                <Button
+                    android:id="@+id/ndot"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="2dp"
+                    android:onClick="onClick"
+                    android:text="." />
+                <Button
+                    android:id="@+id/n0"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="2dp"
+                    android:onClick="onClick"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/clear"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="2dp"
+                    android:onClick="onClick"
+                    android:text="Clear" />
+                <Button
+                    android:id="@+id/div"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="2dp"
+                    android:onClick="onClick"
+                    android:text="÷" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="401dp"
+            android:layout_height="63dp"
+            android:layout_alignParentBottom="true"
+            android:onClick="onClick"
+            android:text="ok" />
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
