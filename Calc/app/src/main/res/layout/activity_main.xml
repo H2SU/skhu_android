@@ -79,7 +79,9 @@
                     android:layout_marginHorizontal="2dp"
                     android:layout_weight="1"
                     android:onClick="onClick"
-                    android:text="＋" />
+                    android:text="＋"
+                    android:textSize="14sp"
+                    app:iconPadding="8dp" />
             </TableRow>
 
             <TableRow android:layout_weight="1">
