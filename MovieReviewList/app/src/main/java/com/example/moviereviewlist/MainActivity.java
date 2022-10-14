@@ -86,13 +86,17 @@ public class MainActivity extends AppCompatActivity implements MyAdapter.ItemCli
                 "2003",
                 "2019"
         };
+        Integer[] ratings = {
+                4,5,4,3,4,3,5,5,5,4,
+                3,4,4,3,4,5,5,4,3,5
+        };
 
         RecyclerView recyclerView = findViewById(R.id.review);
         int columns = 1;
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
-        adapter = new MyAdapter(this, titles, images, releaseYears);
+        adapter = new MyAdapter(this, titles, images, releaseYears,ratings);
         adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
     }
