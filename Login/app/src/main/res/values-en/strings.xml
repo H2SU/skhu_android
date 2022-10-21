@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="korean">Korean</string>
+    <string name="english">English</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+</resources>

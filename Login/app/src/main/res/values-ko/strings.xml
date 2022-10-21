@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Login</string>
+    <string name="korean">한국어</string>
+    <string name="english">영어</string>
+    <string name="username">사용자 이름</string>
+    <string name="password">비밀번호</string>
+</resources>
