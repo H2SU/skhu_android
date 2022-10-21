@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,14 +16,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private String[] mTitle;
     private Integer[] mImage;
     private String[] mReleaseYear;
+    private Integer[] mRating;
+
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
 
-    MyAdapter(Context context, String[] title, Integer[] image, String[] releaseYear) {
+    MyAdapter(Context context, String[] title, Integer[] image, String[] releaseYear, Integer[] rating) {
         this.mInflater = LayoutInflater.from(context);
         this.mTitle = title;
         this.mImage = image;
         this.mReleaseYear = releaseYear;
+        this.mRating = rating;
     }
 
     @Override
@@ -37,6 +41,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         holder.titleTextView.setText(mTitle[position]);
         holder.releaseYearTextView.setText(mReleaseYear[position]);
         holder.imageView.setImageResource(mImage[position]);
+        holder.ratingBar.setRating(mRating[position]);
     }
 
     @Override
@@ -48,12 +53,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         TextView titleTextView;
         TextView releaseYearTextView;
         ImageView imageView;
+        RatingBar ratingBar;
 
         ViewHolder(View itemView) {
             super(itemView);
             titleTextView = itemView.findViewById(R.id.title);
             releaseYearTextView = itemView.findViewById(R.id.releaseYear);
             imageView = itemView.findViewById(R.id.image);
+            ratingBar = itemView.findViewById((R.id.rating));
             itemView.setOnClickListener(this);
         }
 
@@ -62,6 +69,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             if (mClickListener != null) mClickListener.onItemClick(view, getAdapterPosition());
         }
     }
+
     String getItem(int id) {
         return mTitle[id];
     }
@@ -73,4 +81,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public interface ItemClickListener {
         void onItemClick(View view, int position);
     }
+
+
 }
